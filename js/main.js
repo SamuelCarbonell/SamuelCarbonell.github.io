@@ -5,9 +5,10 @@ const WHATSAPP_MSG = "¡Hola Samuel! He visto tu web y me interesa una página p
 
 // Webs de ejemplo del escaparate de la portada: palabra del titular + dirección que se ve en el navegador
 const SHOWCASE = [
-  { word: "cafetería", url: "cafearoma.es" },
+  { word: "restaurante", url: "casaolivo.es" },
   { word: "peluquería", url: "studionova.es" },
   { word: "empresa", url: "reformasmartin.es" },
+  { word: "clínica", url: "nucleofisio.es" },
 ];
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -137,7 +138,7 @@ const counter = new IntersectionObserver(
       const start = performance.now();
       const dur = reduceMotion ? 0 : 1400;
       const tick = (now) => {
-        const p = dur ? Math.min((now - start) / dur, 1) : 1;
+        const p = dur ? Math.min(Math.max((now - start) / dur, 0), 1) : 1; // el primer fotograma puede ser anterior a start
         el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
         if (p < 1) requestAnimationFrame(tick);
       };
