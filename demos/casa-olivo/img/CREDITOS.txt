@@ -1,0 +1,20 @@
+﻿Fotos de Unsplash (licencia Unsplash: uso libre, también comercial).
+
+hero.webp  https://images.unsplash.com/photo-1656423521731-9665583f100c
+barra.webp  https://images.unsplash.com/photo-1780639026821-f680fae0d99d
+jamon.webp  https://images.unsplash.com/photo-1792542092310-355dfbae39d4
+croquetas.webp  https://images.unsplash.com/photo-1626011852881-4609127619a8
+salmorejo.webp  https://images.unsplash.com/photo-1654844828827-e93aa9298cdd
+bravas.webp  https://images.unsplash.com/photo-1565599837634-134bc3aadce8
+montaditos.webp  https://images.unsplash.com/photo-1781115650881-bc5d55bd31d2
+pulpo.webp  https://images.unsplash.com/photo-1682313014568-2ed4f520e020
+paella.webp  https://images.unsplash.com/photo-1783685739826-335e8133a197
+arroz-negro.webp  https://images.unsplash.com/photo-1780823232707-0e3bf0390c74
+tabla.webp  https://images.unsplash.com/photo-1767096088529-1ba1ecc457ee
+vermut.webp  https://images.unsplash.com/photo-1615830783066-26a99bc9d959
+salon.webp  https://images.unsplash.com/photo-1766832255363-c9f060ade8b0
+patio.webp  https://images.unsplash.com/photo-1773681092966-04cc821c6cea
+cocinero.webp  https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf
+vino.webp  https://images.unsplash.com/photo-1681219916726-036039b9b20d
+calle.webp  https://images.unsplash.com/photo-1572625560245-6283a1867c18
+tarta.webp  https://images.unsplash.com/photo-1638519651608-412009302a02
