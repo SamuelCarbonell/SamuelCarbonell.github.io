@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Olivo · Taberna andaluza en Sevilla (demo)</title>
+<meta name="description" content="Web de demostración para una taberna andaluza: tapas, arroces y vinos. Diseñada por Samuel Carbonell.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="img/hero.webp" as="image">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Casa Olivo, inicio">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 35c6-5 12-12 20-23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="18.5" cy="25" rx="2.6" ry="6" transform="rotate(-50 18.5 25)" fill="currentColor"/><ellipse cx="25.5" cy="17.5" rx="2.4" ry="5.6" transform="rotate(-50 25.5 17.5)" fill="currentColor"/><ellipse cx="25" cy="27" rx="2.4" ry="5.6" transform="rotate(35 25 27)" fill="currentColor"/><circle cx="31" cy="21.5" r="2.7" fill="#c0532b"/></svg>
+        <span><span class="brand__name">Casa Olivo</span><span class="brand__tag">Taberna · desde 1987</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="carta.html">Carta</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="reservas.html" class="btn btn--terra">Reservar mesa</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__img" role="img" aria-label="Mesa llena de tapas, arroz y vino"></div>
+      <div class="wrap hero__content">
+        <div>
+          <p class="kicker" style="color:var(--sand)">Taberna andaluza · Sevilla</p>
+          <h1 class="split">Tapas de siempre, <em>hechas como en casa</em></h1>
+          <p class="rv">Producto de mercado, recetas de la abuela y la mejor sobremesa del barrio. Te esperamos con la mesa puesta.</p>
+          <div class="hero__ctas rv">
+            <a href="reservas.html" class="btn btn--terra">Reservar mesa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="carta.html" class="btn btn--light">Ver la carta</a>
+          </div>
+        </div>
+        <aside class="hero__card rv">
+          <span class="open-badge" data-open><i></i> Abierto ahora</span>
+          <h4>Horario</h4>
+          <ul data-hours-compact></ul>
+        </aside>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Descubre<span></span></div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section">
+      <div class="wrap split-intro">
+        <div class="stack">
+          <div class="stack__a rv-img"><img src="img/barra.webp" alt="Barra de la taberna con jamones colgados" loading="lazy" width="1400" height="933"></div>
+          <div class="stack__b rv-img"><img src="img/jamon.webp" alt="Jamón ibérico sobre la barra" loading="lazy" width="900" height="600"></div>
+          <svg class="stack__seal" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+            <circle cx="60" cy="60" r="58" fill="#c0532b"/>
+            <text font-family="DM Sans, sans-serif" font-size="10.5" font-weight="700" fill="#fbf7f0"><textPath href="#circ" textLength="286" lengthAdjust="spacing">COCINA CASERA · PRODUCTO LOCAL ·</textPath></text>
+            <text x="60" y="68" text-anchor="middle" font-family="Fraunces, serif" font-size="24" font-weight="800" fill="#fbf7f0">1987</text>
+          </svg>
+        </div>
+        <div>
+          <p class="kicker rv">Nuestra casa</p>
+          <h2 class="split">Una taberna de barrio con <em>alma de familia</em></h2>
+          <p class="lead rv">Desde 1987 servimos la cocina que nos enseñaron en casa: guisos a fuego lento, frituras crujientes y arroces que se comparten al centro de la mesa.</p>
+          <div class="facts rv">
+            <div><b data-count="37">0</b><span>años abiertos</span></div>
+            <div><b data-count="40">0</b><span>platos en carta</span></div>
+            <div><b data-count="120">0</b><span>vinos en bodega</span></div>
+          </div>
+          <a class="link-arrow rv" href="nosotros.html">Conoce nuestra historia →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ribbon-wrap" aria-hidden="true"><div class="ribbon">
+      <div class="ribbon__track">
+        <span>Salmorejo cordobés</span><span>✦</span><span>Croquetas de puchero</span><span>✦</span><span>Arroz del señorito</span><span>✦</span><span>Pulpo a la brasa</span><span>✦</span><span>Vermut de grifo</span><span>✦</span>
+        <span>Salmorejo cordobés</span><span>✦</span><span>Croquetas de puchero</span><span>✦</span><span>Arroz del señorito</span><span>✦</span><span>Pulpo a la brasa</span><span>✦</span><span>Vermut de grifo</span><span>✦</span>
+      </div>
+    </div></div>
+
+    <!-- IMPRESCINDIBLES -->
+    <section class="section section--cream">
+      <div class="wrap">
+        <div class="head-row">
+          <div class="head">
+            <p class="kicker rv">Los imprescindibles</p>
+            <h2 class="split">Lo que no te puedes <em>ir sin probar</em></h2>
+          </div>
+          <div class="rail-ctrl rv" data-rail="dishes">
+            <button data-prev aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+            <button data-next aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="rail" id="dishes">
+          <article class="dish rv"><div class="dish__img"><img src="img/croquetas.webp" alt="Croquetas caseras" loading="lazy"><span class="dish__tag">⭐ La favorita</span></div><h3>Croquetas de puchero <small>9,50 €</small></h3><p>Cremosas por dentro, crujientes por fuera. 6 unidades.</p></article>
+          <article class="dish rv"><div class="dish__img"><img src="img/salmorejo.webp" alt="Salmorejo con picadillo" loading="lazy"></div><h3>Salmorejo <small>7,00 €</small></h3><p>Con huevo, jamón y un buen chorro de aceite de la sierra.</p></article>
+          <article class="dish rv"><div class="dish__img"><img src="img/paella.webp" alt="Arroz de marisco en paellera" loading="lazy"><span class="dish__tag">Para 2</span></div><h3>Arroz del señorito <small>34,00 €</small></h3><p>Todo pelado, para disfrutar sin mancharse las manos.</p></article>
+          <article class="dish rv"><div class="dish__img"><img src="img/pulpo.webp" alt="Pulpo a la brasa con verduras" loading="lazy"></div><h3>Pulpo a la brasa <small>19,50 €</small></h3><p>Sobre cremoso de patata y pimentón de la Vera.</p></article>
+          <article class="dish rv"><div class="dish__img"><img src="img/bravas.webp" alt="Patatas bravas" loading="lazy"></div><h3>Bravas de la casa <small>6,50 €</small></h3><p>Nuestra salsa picante, receta secreta desde 1987.</p></article>
+          <article class="dish rv"><div class="dish__img"><img src="img/montaditos.webp" alt="Montaditos variados" loading="lazy"></div><h3>Montaditos <small>2,50 €</small></h3><p>Pringá, lomo en manteca, melva con piparra…</p></article>
+        </div>
+        <div class="center rv" style="margin-top:2.5rem"><a href="carta.html" class="btn btn--outline">Ver la carta completa</a></div>
+      </div>
+    </section>
+
+    <!-- AMBIENTE -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head center">
+          <p class="kicker rv">El ambiente</p>
+          <h2 class="split">Barra, salón y un <em>patio para las noches de verano</em></h2>
+        </div>
+        <div class="gallery">
+          <button class="g-wide g-tall rv" data-caption="El salón"><img src="img/salon.webp" alt="Salón con mesas vestidas" loading="lazy"></button>
+          <button class="rv" data-caption="Vinos de la tierra"><img src="img/vino.webp" alt="Copas de vino y platos en la mesa" loading="lazy"></button>
+          <button class="rv" data-caption="Hora del vermut"><img src="img/vermut.webp" alt="Vermut con aceitunas" loading="lazy"></button>
+          <button class="g-wide rv" data-caption="El patio"><img src="img/patio.webp" alt="Patio con mesas de barril" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="section section--ink">
+      <div class="wrap">
+        <p class="kicker center rv" style="display:flex;justify-content:center">Lo que dicen de nosotros</p>
+        <div class="quotes">
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Las mejores croquetas que he probado en Sevilla. Y el trato, como estar en casa de tu abuela.”</blockquote><cite>Lucía M. · Google</cite></figure>
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“El arroz del señorito merece el viaje. Pedimos dos y no sobró ni un grano.”</blockquote><cite>Javier R. · TripAdvisor</cite></figure>
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“El patio en verano es una maravilla. Ideal para cenar con amigos sin prisa.”</blockquote><cite>Marta G. · Google</cite></figure>
+        </div>
+        <div class="quote-dots"></div>
+      </div>
+    </section>
+
+    <!-- VISÍTANOS -->
+    <section class="section section--cream">
+      <div class="wrap visit">
+        <div class="visit__card rv">
+          <p class="kicker">Visítanos</p>
+          <h2>Te esperamos en el centro</h2>
+          <ul class="hours" data-hours></ul>
+          <ul class="contact-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Calle del Olivo, 14 · Sevilla</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>954 00 00 00</span></li>
+          </ul>
+          <a href="reservas.html" class="btn btn--terra">Reservar mesa</a>
+        </div>
+        <div class="map rv">
+          <iframe title="Mapa de ubicación" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-5.9965%2C37.3870%2C-5.9825%2C37.3940&amp;layer=mapnik&amp;marker=37.3905%2C-5.9895"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="cta-band__img" data-parallax="70" style="background-image:url('img/calle.webp')"></div>
+      <div class="wrap">
+        <h2 class="split">¿Te guardamos <em style="color:var(--sand)">una mesa</em>?</h2>
+        <p class="rv">Reserva en un minuto. Para grupos de más de 10, escríbenos y te preparamos un menú.</p>
+        <a href="reservas.html" class="btn btn--light rv">Hacer una reserva</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 35c6-5 12-12 20-23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="18.5" cy="25" rx="2.6" ry="6" transform="rotate(-50 18.5 25)" fill="currentColor"/><ellipse cx="25.5" cy="17.5" rx="2.4" ry="5.6" transform="rotate(-50 25.5 17.5)" fill="currentColor"/><ellipse cx="25" cy="27" rx="2.4" ry="5.6" transform="rotate(35 25 27)" fill="currentColor"/><circle cx="31" cy="21.5" r="2.7" fill="#c0532b"/></svg>
+            <span><span class="brand__name">Casa Olivo</span><span class="brand__tag">Taberna · desde 1987</span></span>
+          </a>
+          <p>Cocina andaluza de toda la vida, en el corazón de Sevilla.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5Z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="carta.html">Carta</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="reservas.html">Reservas</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Calle del Olivo, 14</li><li>41004 Sevilla</li><li>954 00 00 00</li><li>hola@casaolivo.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Mar – Jue: 12:30 – 23:30</li><li>Vie – Sáb: 12:30 – 00:30</li><li>Domingo: 12:30 – 16:30</li><li>Lunes: cerrado</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Casa Olivo · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-label="Imagen ampliada"><button class="lightbox__close" aria-label="Cerrar">×</button><div><img alt=""><p></p></div></div>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

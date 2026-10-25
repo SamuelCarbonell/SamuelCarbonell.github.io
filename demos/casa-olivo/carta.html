@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carta · Casa Olivo (demo)</title>
+<meta name="description" content="Carta de Casa Olivo: tapas, frituras, arroces, carnes, postres y vinos. Web de demostración.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Casa Olivo, inicio">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 35c6-5 12-12 20-23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="18.5" cy="25" rx="2.6" ry="6" transform="rotate(-50 18.5 25)" fill="currentColor"/><ellipse cx="25.5" cy="17.5" rx="2.4" ry="5.6" transform="rotate(-50 25.5 17.5)" fill="currentColor"/><ellipse cx="25" cy="27" rx="2.4" ry="5.6" transform="rotate(35 25 27)" fill="currentColor"/><circle cx="31" cy="21.5" r="2.7" fill="#c0532b"/></svg>
+        <span><span class="brand__name">Casa Olivo</span><span class="brand__tag">Taberna · desde 1987</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="carta.html" aria-current="page">Carta</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="reservas.html" class="btn btn--terra">Reservar mesa</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__img" data-parallax="60" style="background-image:url('img/tabla.webp')"></div>
+      <div class="wrap">
+        <p class="crumbs rv"><a href="index.html">Inicio</a> / Carta</p>
+        <h1 class="split">Nuestra <em style="color:var(--sand)">carta</em></h1>
+        <p class="rv">Cocina de mercado: algunos platos cambian según la temporada. Pregúntanos por las sugerencias del día.</p>
+      </div>
+    </section>
+
+    <nav class="menu-tabs" aria-label="Secciones de la carta">
+      <div class="wrap">
+        <a href="#picar" class="active">Para picar</a>
+        <a href="#frituras">Frituras</a>
+        <a href="#arroces">Arroces</a>
+        <a href="#brasa">De la brasa</a>
+        <a href="#postres">Postres</a>
+        <a href="#bebidas">Vinos y vermut</a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="wrap menu-layout">
+        <div>
+          <div class="menu-cat" id="picar">
+            <div class="menu-cat__head rv"><img src="img/salmorejo.webp" alt="" loading="lazy"><div><h2>Para picar</h2><p>Frío y del tiempo, para abrir boca.</p></div></div>
+            <div class="item rv"><div class="item__row"><h3>Salmorejo cordobés <span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="dots"></span><span class="price">7,00 €</span></div><p>Con huevo duro, taquitos de jamón y aceite de oliva virgen extra.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Jamón ibérico de bellota <span class="tags"><span class="tag tag--gf">Sin gluten</span></span></h3><span class="dots"></span><span class="price">22,00 €</span></div><p>Cortado a cuchillo. Media ración 12,00 €.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Tabla de quesos de la sierra</h3><span class="dots"></span><span class="price">14,50 €</span></div><p>Payoyo, cabra curado y torta, con mermelada de tomate casera.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Ensaladilla de la casa <span class="tags"><span class="tag tag--star">★ Top</span></span></h3><span class="dots"></span><span class="price">6,50 €</span></div><p>Con ventresca de atún y picos de Jerez.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Montaditos (unidad)</h3><span class="dots"></span><span class="price">2,50 €</span></div><p>Pringá, lomo en manteca colorá o melva con piparra.</p></div>
+          </div>
+
+          <div class="menu-cat" id="frituras">
+            <div class="menu-cat__head rv"><img src="img/croquetas.webp" alt="" loading="lazy"><div><h2>Frituras</h2><p>En aceite de oliva, siempre limpio.</p></div></div>
+            <div class="item rv"><div class="item__row"><h3>Croquetas de puchero <span class="tags"><span class="tag tag--star">★ Top</span></span></h3><span class="dots"></span><span class="price">9,50 €</span></div><p>6 unidades, con la carne del puchero de los jueves.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Bravas de la casa <span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="dots"></span><span class="price">6,50 €</span></div><p>Patata natural y nuestra salsa picante de siempre.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Cazón en adobo</h3><span class="dots"></span><span class="price">11,00 €</span></div><p>Marinado 24 horas con comino, orégano y vinagre de Jerez.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Berenjenas con miel de caña <span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="dots"></span><span class="price">8,00 €</span></div><p>Finas y crujientes, con un toque de sal en escamas.</p></div>
+          </div>
+
+          <div class="menu-cat" id="arroces">
+            <div class="menu-cat__head rv"><img src="img/paella.webp" alt="" loading="lazy"><div><h2>Arroces</h2><p>Mínimo 2 personas. Precio por persona. 25 min.</p></div></div>
+            <div class="item rv"><div class="item__row"><h3>Arroz del señorito <span class="tags"><span class="tag tag--star">★ Top</span><span class="tag tag--gf">Sin gluten</span></span></h3><span class="dots"></span><span class="price">17,00 €</span></div><p>Marisco todo pelado, fumet de galeras y sofrito de la casa.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Arroz negro con chipirones</h3><span class="dots"></span><span class="price">16,00 €</span></div><p>Con su tinta y alioli suave de ajo asado.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Arroz de verduras de temporada <span class="tags"><span class="tag tag--veg">Veg</span></span></h3><span class="dots"></span><span class="price">14,00 €</span></div><p>Alcachofa, judía verde y setas, según mercado.</p></div>
+          </div>
+
+          <div class="menu-cat" id="brasa">
+            <div class="menu-cat__head rv"><img src="img/pulpo.webp" alt="" loading="lazy"><div><h2>De la brasa</h2><p>Carbón de encina, como debe ser.</p></div></div>
+            <div class="item rv"><div class="item__row"><h3>Pulpo a la brasa <span class="tags"><span class="tag tag--gf">Sin gluten</span></span></h3><span class="dots"></span><span class="price">19,50 €</span></div><p>Sobre cremoso de patata y pimentón de la Vera.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Presa ibérica</h3><span class="dots"></span><span class="price">18,00 €</span></div><p>Con patatas a lo pobre y pimientos del padrón.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Lomo de vaca madurada</h3><span class="dots"></span><span class="price">24,00 €</span></div><p>300 g, con sal en escamas y guarnición del día.</p></div>
+          </div>
+
+          <div class="menu-cat" id="postres">
+            <div class="menu-cat__head rv"><img src="img/tarta.webp" alt="" loading="lazy"><div><h2>Postres</h2><p>Todos caseros, hechos cada mañana.</p></div></div>
+            <div class="item rv"><div class="item__row"><h3>Torrija de la abuela</h3><span class="dots"></span><span class="price">6,00 €</span></div><p>Con helado de canela y miel de caña.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Tocino de cielo</h3><span class="dots"></span><span class="price">5,50 €</span></div><p>Receta tradicional con yemas de huevo de corral.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Tarta de queso payoyo <span class="tags"><span class="tag tag--star">★ Top</span></span></h3><span class="dots"></span><span class="price">6,50 €</span></div><p>Cremosa por dentro y tostada por fuera.</p></div>
+          </div>
+
+          <div class="menu-cat" id="bebidas">
+            <div class="menu-cat__head rv"><img src="img/vino.webp" alt="" loading="lazy"><div><h2>Vinos y vermut</h2><p>Selección de bodegas andaluzas.</p></div></div>
+            <div class="item rv"><div class="item__row"><h3>Vermut de grifo</h3><span class="dots"></span><span class="price">3,00 €</span></div><p>Con naranja y aceituna aliñada.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Fino o manzanilla (copa)</h3><span class="dots"></span><span class="price">2,80 €</span></div><p>Bien frío, como manda la tradición.</p></div>
+            <div class="item rv"><div class="item__row"><h3>Tinto de la Sierra de Sevilla (copa)</h3><span class="dots"></span><span class="price">3,80 €</span></div><p>Pregunta por nuestra carta completa de vinos.</p></div>
+          </div>
+        </div>
+
+        <aside class="menu-aside">
+          <div class="daily rv">
+            <p class="kicker" style="color:var(--sand)">De martes a viernes</p>
+            <h3>Menú del día</h3>
+            <p class="price-big">15 € <small>bebida y postre incluidos</small></p>
+            <ul><li>Primero a elegir entre tres</li><li>Segundo de cuchara o de la brasa</li><li>Postre casero o café</li></ul>
+            <a href="reservas.html" class="btn">Reservar para comer</a>
+          </div>
+          <div class="legend rv">
+            <p><span class="tag tag--star">★ Top</span> Lo más pedido</p>
+            <p><span class="tag tag--veg">Veg</span> Vegetariano</p>
+            <p><span class="tag tag--gf">Sin gluten</span> Apto para celíacos</p>
+            <p style="margin-top:.8rem">Consulta con nosotros cualquier alergia o intolerancia. IVA incluido.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-band__img" data-parallax="70" style="background-image:url('img/patio.webp')"></div>
+      <div class="wrap">
+        <h2 class="split">¿Se te ha <em style="color:var(--sand)">abierto el apetito</em>?</h2>
+        <p class="rv">Reserva tu mesa en el salón o en el patio.</p>
+        <a href="reservas.html" class="btn btn--light rv">Reservar mesa</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 35c6-5 12-12 20-23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="18.5" cy="25" rx="2.6" ry="6" transform="rotate(-50 18.5 25)" fill="currentColor"/><ellipse cx="25.5" cy="17.5" rx="2.4" ry="5.6" transform="rotate(-50 25.5 17.5)" fill="currentColor"/><ellipse cx="25" cy="27" rx="2.4" ry="5.6" transform="rotate(35 25 27)" fill="currentColor"/><circle cx="31" cy="21.5" r="2.7" fill="#c0532b"/></svg>
+            <span><span class="brand__name">Casa Olivo</span><span class="brand__tag">Taberna · desde 1987</span></span>
+          </a>
+          <p>Cocina andaluza de toda la vida, en el corazón de Sevilla.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5Z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="carta.html">Carta</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="reservas.html">Reservas</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Calle del Olivo, 14</li><li>41004 Sevilla</li><li>954 00 00 00</li><li>hola@casaolivo.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Mar – Jue: 12:30 – 23:30</li><li>Vie – Sáb: 12:30 – 00:30</li><li>Domingo: 12:30 – 16:30</li><li>Lunes: cerrado</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Casa Olivo · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

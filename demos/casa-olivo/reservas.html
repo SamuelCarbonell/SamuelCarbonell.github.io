@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservas · Casa Olivo (demo)</title>
+<meta name="description" content="Reserva mesa en Casa Olivo, taberna andaluza en Sevilla. Web de demostración.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Casa Olivo, inicio">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 35c6-5 12-12 20-23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="18.5" cy="25" rx="2.6" ry="6" transform="rotate(-50 18.5 25)" fill="currentColor"/><ellipse cx="25.5" cy="17.5" rx="2.4" ry="5.6" transform="rotate(-50 25.5 17.5)" fill="currentColor"/><ellipse cx="25" cy="27" rx="2.4" ry="5.6" transform="rotate(35 25 27)" fill="currentColor"/><circle cx="31" cy="21.5" r="2.7" fill="#c0532b"/></svg>
+        <span><span class="brand__name">Casa Olivo</span><span class="brand__tag">Taberna · desde 1987</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="carta.html">Carta</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="reservas.html" class="btn btn--terra" aria-current="page">Reservar mesa</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__img" data-parallax="60" style="background-image:url('img/vino.webp')"></div>
+      <div class="wrap">
+        <p class="crumbs rv"><a href="index.html">Inicio</a> / Reservas</p>
+        <h1 class="split">Reserva <em style="color:var(--sand)">tu mesa</em></h1>
+        <p class="rv">Elige día, hora y zona. Te confirmamos por WhatsApp en menos de una hora.</p>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="wrap booking">
+        <form class="form rv" id="bookingForm">
+          <h2>Datos de la reserva</h2>
+          <div class="form__row">
+            <div class="field"><label for="b-name">Nombre</label><input id="b-name" name="nombre" required autocomplete="name" placeholder="¿A nombre de quién?"></div>
+            <div class="field"><label for="b-phone">Teléfono</label><input id="b-phone" name="telefono" type="tel" required autocomplete="tel" placeholder="600 000 000"></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="b-date">Día</label><input id="b-date" name="fecha" type="date" required></div>
+            <div class="field"><label for="b-time">Hora</label><select id="b-time" name="hora" required></select></div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <span class="field__label" style="font-size:.82rem;font-weight:700;color:var(--muted)">Personas</span>
+              <div class="stepper"><button type="button" data-step="-1" aria-label="Una persona menos">−</button><output id="b-people-out" aria-live="polite">2</output><button type="button" data-step="1" aria-label="Una persona más">+</button></div>
+              <input type="hidden" name="personas" id="b-people" value="2">
+            </div>
+            <fieldset class="field">
+              <legend>Zona</legend>
+              <div class="chips">
+                <label><input type="radio" name="zona" value="Salón" checked><span>Salón</span></label>
+                <label><input type="radio" name="zona" value="Patio"><span>Patio</span></label>
+                <label><input type="radio" name="zona" value="Barra"><span>Barra</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="field"><label for="b-notes">Comentarios (opcional)</label><textarea id="b-notes" name="notas" rows="3" placeholder="Alergias, trona para bebé, celebración…"></textarea></div>
+          <button class="btn btn--terra" type="submit">Solicitar reserva <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+
+        <aside class="booking__aside">
+          <div class="info-card rv">
+            <h3>¿Sois más de 10?</h3>
+            <p>Para grupos y celebraciones preparamos menús cerrados desde 28 € por persona. Escríbenos y te mandamos opciones.</p>
+          </div>
+          <div class="visit__card rv" style="padding:1.8rem">
+            <h3>Horario</h3>
+            <ul class="hours" data-hours style="margin-bottom:0"></ul>
+          </div>
+          <div class="faq rv">
+            <details><summary>¿Tenéis opciones sin gluten?</summary><p>Sí, buena parte de la carta es apta y la marcamos. Freímos los platos sin gluten en una freidora aparte.</p></details>
+            <details><summary>¿Se puede ir sin reserva?</summary><p>Claro. La barra es siempre sin reserva, y si hay mesa libre te sentamos encantados.</p></details>
+            <details><summary>¿El patio está cubierto?</summary><p>Tiene toldo y calefactores, así que está abierto todo el año salvo con lluvia fuerte.</p></details>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;background:var(--cream)">
+      <div class="wrap">
+        <div class="map rv" style="min-height:420px">
+          <iframe title="Mapa de ubicación" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-5.9965%2C37.3870%2C-5.9825%2C37.3940&amp;layer=mapnik&amp;marker=37.3905%2C-5.9895"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 35c6-5 12-12 20-23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="18.5" cy="25" rx="2.6" ry="6" transform="rotate(-50 18.5 25)" fill="currentColor"/><ellipse cx="25.5" cy="17.5" rx="2.4" ry="5.6" transform="rotate(-50 25.5 17.5)" fill="currentColor"/><ellipse cx="25" cy="27" rx="2.4" ry="5.6" transform="rotate(35 25 27)" fill="currentColor"/><circle cx="31" cy="21.5" r="2.7" fill="#c0532b"/></svg>
+            <span><span class="brand__name">Casa Olivo</span><span class="brand__tag">Taberna · desde 1987</span></span>
+          </a>
+          <p>Cocina andaluza de toda la vida, en el corazón de Sevilla.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5Z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="carta.html">Carta</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="reservas.html">Reservas</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Calle del Olivo, 14</li><li>41004 Sevilla</li><li>954 00 00 00</li><li>hola@casaolivo.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Mar – Jue: 12:30 – 23:30</li><li>Vie – Sáb: 12:30 – 00:30</li><li>Domingo: 12:30 – 16:30</li><li>Lunes: cerrado</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Casa Olivo · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__box">
+      <div class="modal__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h3 id="modalTitle">¡Solicitud lista!</h3>
+      <p class="bubble"></p>
+      <small>Esto es una demo: en la web real, este mensaje llegaría al WhatsApp del restaurante.</small>
+      <button class="btn btn--olive" data-close>Entendido</button>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
