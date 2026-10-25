@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Nova · Peluquería y estética en Sevilla (demo)</title>
+<meta name="description" content="Web de demostración para una peluquería y centro de estética. Diseñada por Samuel Carbonell.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="img/hero.webp" as="image">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Studio Nova, inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1"/><path d="M20 7c1 9 4 12 13 13-9 1-12 4-13 13-1-9-4-12-13-13 9-1 12-4 13-13Z" fill="currentColor"/></svg>
+        <span><span class="brand__name">NOVA</span><span class="brand__tag">Studio · Hair &amp; Beauty</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="trabajos.html">Trabajos</a>
+        <a href="cita.html" class="btn btn--primary">Pedir cita</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="kicker rv">Peluquería · Estética · Sevilla</p>
+          <h1 class="split">Tu mejor <em>versión</em></h1>
+          <p class="rv">Un espacio pensado para ti, con profesionales que escuchan y productos que cuidan tu pelo y tu piel.</p>
+          <div class="hero__ctas rv">
+            <a href="cita.html" class="btn btn--primary">Reservar cita <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
+          </div>
+          <div class="rating rv">
+            <div class="rating__faces"><img src="img/equipo-1.webp" alt=""><img src="img/equipo-2.webp" alt=""><img src="img/equipo-3.webp" alt=""></div>
+            <span><b>4,9 ★</b> · más de 300 reseñas</span>
+          </div>
+        </div>
+        <div class="arch rv">
+          <div class="arch__img"><img src="img/hero.webp" alt="Melena ondulada con mechas balayage" width="1600" height="1067"></div>
+          <span class="arch__ring" aria-hidden="true"></span>
+          <svg class="badge-spin" viewBox="0 0 130 130" aria-hidden="true">
+            <defs><path id="c" d="M65 65m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs>
+            <circle cx="65" cy="65" r="63" fill="#251c24"/>
+            <text font-family="Manrope, sans-serif" font-size="10.5" font-weight="700" fill="#fbf6f4"><textPath href="#c" textLength="312" lengthAdjust="spacing">RESERVA ONLINE · RESERVA ONLINE ·</textPath></text>
+            <path d="M65 48c.8 7 3.2 9.4 10 10.2-6.8.8-9.2 3.2-10 10.2-.8-7-3.2-9.4-10-10.2 6.8-.8 9.2-3.2 10-10.2Z" fill="#e9b9bd" transform="translate(0 6)"/>
+          </svg>
+          <div class="float-card"><i>✨</i><span><b id="nextSlot">Hoy · 17:30</b>Próximo hueco libre</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Corte</span><span>✦</span><span>Balayage</span><span>✦</span><span>Peinados</span><span>✦</span><span>Keratina</span><span>✦</span><span>Manicura</span><span>✦</span><span>Tratamiento facial</span><span>✦</span>
+        <span>Corte</span><span>✦</span><span>Balayage</span><span>✦</span><span>Peinados</span><span>✦</span><span>Keratina</span><span>✦</span><span>Manicura</span><span>✦</span><span>Tratamiento facial</span><span>✦</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head-row">
+          <div class="head">
+            <p class="kicker rv">Lo que hacemos</p>
+            <h2 class="split">Servicios pensados <em>para ti</em></h2>
+          </div>
+          <a href="servicios.html" class="link-arrow rv">Ver todos los precios →</a>
+        </div>
+        <div class="services">
+          <a class="svc rv" href="servicios.html#corte"><div class="svc__img"><img src="img/corte.webp" alt="Corte de pelo con tijera" loading="lazy"></div><h3>Corte</h3><p>Asesoría de imagen incluida.</p><small>DESDE 22 €</small></a>
+          <a class="svc rv" href="servicios.html#color"><div class="svc__img"><img src="img/color.webp" alt="Pelo con mechas en tonos fríos" loading="lazy"></div><h3>Color</h3><p>Balayage, mechas y tintes.</p><small>DESDE 38 €</small></a>
+          <a class="svc rv" href="servicios.html#unas"><div class="svc__img"><img src="img/unas.webp" alt="Manicura semipermanente" loading="lazy"></div><h3>Uñas</h3><p>Semipermanente y nail art.</p><small>DESDE 20 €</small></a>
+          <a class="svc rv" href="servicios.html#estetica"><div class="svc__img"><img src="img/facial.webp" alt="Tratamiento facial" loading="lazy"></div><h3>Estética</h3><p>Faciales, cejas y pestañas.</p><small>DESDE 12 €</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt space">
+      <div class="wrap grid-2">
+        <div class="space__imgs">
+          <div class="a rv-img"><img src="img/salon.webp" alt="Interior del salón con espejos redondos" loading="lazy"></div>
+          <div class="b rv-img"><img src="img/peinado.webp" alt="Peinado con secador y cepillo" loading="lazy"></div>
+        </div>
+        <div>
+          <p class="kicker rv">Nuestro espacio</p>
+          <h2 class="split">Un rato solo <em>para ti</em></h2>
+          <p class="lead rv">Luz natural, música tranquila y un café mientras te cuidamos. Trabajamos con cita para que nunca tengas que esperar.</p>
+          <div class="facts rv">
+            <div><b data-count="12">0</b><span>años cuidándote</span></div>
+            <div><b data-count="6">0</b><span>profesionales</span></div>
+            <div><b data-count="4800" data-suffix="+">0</b><span>clientas felices</span></div>
+          </div>
+          <a href="trabajos.html" class="link-arrow rv">Ver nuestros trabajos →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head center">
+          <p class="kicker rv">El equipo</p>
+          <h2 class="split">Manos expertas, <em>trato cercano</em></h2>
+        </div>
+        <div class="team">
+          <article class="member rv"><div class="member__img"><img src="img/equipo-1.webp" alt="Lucía, colorista" loading="lazy"></div><h3>Lucía</h3><p>Colorista · Especialista en balayage</p><span class="handle">@lucia.nova</span></article>
+          <article class="member rv"><div class="member__img"><img src="img/equipo-2.webp" alt="Marta, estilista" loading="lazy"></div><h3>Marta</h3><p>Estilista · Cortes y recogidos</p><span class="handle">@marta.nova</span></article>
+          <article class="member rv"><div class="member__img"><img src="img/equipo-3.webp" alt="Elena, esteticista" loading="lazy"></div><h3>Elena</h3><p>Esteticista · Uñas y faciales</p><span class="handle">@elena.nova</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="wrap">
+        <p class="kicker center rv" style="display:flex;justify-content:center">Opiniones</p>
+        <div class="quotes">
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Salgo siempre sintiéndome otra persona. Lucía entiende a la primera lo que quieres.”</blockquote><cite>Carmen L. · Google</cite></figure>
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“El mejor balayage que me han hecho, natural y sin dañar el pelo.”</blockquote><cite>Ana P. · Google</cite></figure>
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Reservar es facilísimo y nunca esperas. Un sitio para desconectar.”</blockquote><cite>Rocío M. · Instagram</cite></figure>
+        </div>
+        <div class="quote-dots"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head-row">
+          <div class="head"><p class="kicker rv">@studionova</p><h2 class="split">Trabajos <em>recientes</em></h2></div>
+          <a href="trabajos.html" class="link-arrow rv">Ver galería →</a>
+        </div>
+        <div class="strip">
+          <a class="rv" href="trabajos.html"><img src="img/cobre.webp" alt="Color cobrizo" loading="lazy"></a>
+          <a class="rv" href="trabajos.html"><img src="img/extensiones.webp" alt="Extensiones" loading="lazy"></a>
+          <a class="rv" href="trabajos.html"><img src="img/unas-proceso.webp" alt="Manicura en proceso" loading="lazy"></a>
+          <a class="rv" href="trabajos.html"><img src="img/lavado.webp" alt="Lavado y tratamiento" loading="lazy"></a>
+          <a class="rv" href="trabajos.html"><img src="img/color.webp" alt="Mechas frías" loading="lazy"></a>
+          <a class="rv" href="trabajos.html"><img src="img/productos.webp" alt="Productos profesionales" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-band__img" data-parallax="70" style="background-image:url('img/salon-luz.webp')"></div>
+      <div class="wrap">
+        <h2 class="split">Reserva <em style="color:var(--rose)">tu momento</em></h2>
+        <p class="rv">Elige servicio, profesional y hora en menos de un minuto.</p>
+        <a href="cita.html" class="btn btn--light rv">Pedir cita online</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1"/><path d="M20 7c1 9 4 12 13 13-9 1-12 4-13 13-1-9-4-12-13-13 9-1 12-4 13-13Z" fill="currentColor"/></svg><span><span class="brand__name">NOVA</span><span class="brand__tag">Studio · Hair &amp; Beauty</span></span></a>
+          <p>Peluquería y estética con cita previa en Sevilla.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.7 3.9 4 4.1v3.1c-1.5.1-2.8-.3-4-1.1v6.4A5.5 5.5 0 1 1 10.5 10v3.2a2.4 2.4 0 1 0 2.4 2.4V3H16Z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="trabajos.html">Trabajos</a></li><li><a href="cita.html">Pedir cita</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Av. de la Luz, 8</li><li>41010 Sevilla</li><li>955 00 00 00</li><li>hola@studionova.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Mar – Vie: 10:00 – 20:00</li><li>Sábado: 10:00 – 14:00</li><li>Dom – Lun: cerrado</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Studio Nova · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../_shared/core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
