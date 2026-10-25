@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reformas Martín · Reformas integrales en Sevilla (demo)</title>
+<meta name="description" content="Web de demostración para una empresa de reformas: cocinas, baños y reformas integrales. Diseñada por Samuel Carbonell.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="img/hero.webp" as="image">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Reformas Martín, inicio">
+        <span class="brand__mark">RM</span>
+        <span><span class="brand__name">Reformas Martín</span><span class="brand__tag">Desde 2006 · Sevilla</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="presupuesto.html" class="btn btn--primary">Presupuesto</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="kicker rv">Reformas integrales · Sevilla y provincia</p>
+          <h1 class="split">Reformamos tu casa <em>sin dolores de cabeza</em></h1>
+          <p class="rv">Cocinas, baños y pisos completos con presupuesto cerrado, un único responsable de obra y plazos firmados por contrato.</p>
+          <div class="hero__ctas rv">
+            <a href="presupuesto.html" class="btn btn--primary">Calcula tu presupuesto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#" class="call"><i>📞</i><span>954 00 00 00<small>Lunes a viernes, 8:00 – 19:00</small></span></a>
+          </div>
+          <ul class="trust rv"><li>Presupuesto en 48 h</li><li>Garantía de 5 años</li><li>Limpieza final incluida</li></ul>
+        </div>
+        <div class="hero__visual rv">
+          <div class="hero__img"><img src="img/hero.webp" alt="Cocina reformada con isla central" width="1600" height="1067"></div>
+          <span class="hero__block" aria-hidden="true"></span>
+          <div class="stat-badge"><b data-count="350" data-suffix="+">0</b><span>Obras terminadas</span></div>
+        </div>
+      </div>
+      <div class="tape" aria-hidden="true"></div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head-row">
+          <div class="head"><p class="kicker rv">Qué hacemos</p><h2 class="split">Un equipo para <em>toda la obra</em></h2></div>
+          <a href="servicios.html" class="link-arrow rv">Todos los servicios →</a>
+        </div>
+        <div class="svc-grid">
+          <a class="svc-card rv" href="servicios.html#cocinas"><div class="svc-card__img"><img src="img/cocina.webp" alt="Cocina blanca con isla" loading="lazy"></div><div class="svc-card__body"><span class="n">01</span><h3>Cocinas</h3><p>Diseño, muebles a medida, encimeras e instalación completa.</p><span class="from">Desde <b>4.500 €</b></span></div></a>
+          <a class="svc-card rv" href="servicios.html#banos"><div class="svc-card__img"><img src="img/bano.webp" alt="Baño reformado en madera y blanco" loading="lazy"></div><div class="svc-card__body"><span class="n">02</span><h3>Baños</h3><p>Cambio de bañera por plato de ducha en 3 días.</p><span class="from">Desde <b>3.300 €</b></span></div></a>
+          <a class="svc-card rv" href="servicios.html#integrales"><div class="svc-card__img"><img src="img/salon.webp" alt="Salón luminoso reformado" loading="lazy"></div><div class="svc-card__body"><span class="n">03</span><h3>Integrales</h3><p>Pisos completos llave en mano, con licencias incluidas.</p><span class="from">Desde <b>450 €/m²</b></span></div></a>
+          <a class="svc-card rv" href="servicios.html#pintura"><div class="svc-card__img"><img src="img/pintura.webp" alt="Pintando una pared con rodillo" loading="lazy"></div><div class="svc-card__body"><span class="n">04</span><h3>Pintura</h3><p>Alisado de gotelé, pintura interior y exterior.</p><span class="from">Desde <b>9 €/m²</b></span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="wrap">
+        <div class="head-row">
+          <div class="head"><p class="kicker rv">Antes / después</p><h2 class="split">Mira la <em>diferencia</em></h2></div>
+          <p class="muted rv" style="max-width:380px;margin:0">Arrastra la barra amarilla. Piso de 85 m² en Nervión, terminado en 7 semanas.</p>
+        </div>
+        <div class="ba rv" tabindex="0" role="slider" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <img src="img/antes-1.webp" alt="Habitación antes de la reforma" loading="lazy">
+          <img class="after" src="img/salon-2.webp" alt="La misma estancia después de la reforma" loading="lazy">
+          <span class="ba__tag ba__tag--a">Antes</span><span class="ba__tag ba__tag--b">Después</span>
+          <span class="ba__handle"></span>
+        </div>
+        <div class="ba-meta rv"><span>📍 Nervión, Sevilla</span><span>📐 85 m²</span><span>⏱ 7 semanas</span><a class="link-arrow" style="color:var(--accent)" href="proyectos.html">Ver más proyectos →</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="head"><p class="kicker rv">Cómo trabajamos</p><h2 class="split">Cinco pasos, <em>cero sorpresas</em></h2></div>
+        <ol class="steps process">
+          <li class="step rv"><h3>Visita</h3><p>Vamos a tu casa, medimos y escuchamos lo que necesitas. Gratis.</p></li>
+          <li class="step rv"><h3>Presupuesto</h3><p>En 48 h, cerrado y por partidas. Sin letra pequeña.</p></li>
+          <li class="step rv"><h3>Diseño</h3><p>Te enseñamos cómo quedará en 3D antes de empezar.</p></li>
+          <li class="step rv"><h3>Obra</h3><p>Un jefe de obra te informa cada semana por WhatsApp.</p></li>
+          <li class="step rv"><h3>Entrega</h3><p>Limpieza final, revisión contigo y 5 años de garantía.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--dark" style="padding-block:clamp(60px,8vw,100px)">
+      <div class="wrap big-nums">
+        <div class="rv"><b data-count="350">0</b><span>Obras terminadas</span></div>
+        <div class="rv"><b data-count="20">0</b><span>Años de experiencia</span></div>
+        <div class="rv"><b data-count="14">0</b><span>Profesionales</span></div>
+        <div class="rv"><b data-count="5">0</b><span>Años de garantía</span></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <p class="kicker center rv" style="display:flex;justify-content:center">Opiniones de clientes</p>
+        <div class="quotes">
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Cumplieron el plazo al día. El jefe de obra nos mandaba fotos cada viernes.”</blockquote><cite>Familia Ortega · Reforma integral</cite></figure>
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“El presupuesto fue el que pagamos, ni un euro más. Eso no pasa nunca.”</blockquote><cite>Javier S. · Cocina</cite></figure>
+          <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Cambiaron la bañera por un plato de ducha en tres días y lo dejaron todo limpio.”</blockquote><cite>Pilar R. · Baño</cite></figure>
+        </div>
+        <div class="quote-dots"></div>
+      </div>
+    </section>
+
+    <section class="yellow-band">
+      <div class="wrap">
+        <h2 class="split">Cuéntanos tu reforma y te damos precio en 48 h</h2>
+        <a href="presupuesto.html" class="btn btn--dark rv">Calcular presupuesto →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__mark">RM</span><span><span class="brand__name">Reformas Martín</span><span class="brand__tag">Desde 2006 · Sevilla</span></span></a>
+          <p>Empresa de reformas con equipo propio en Sevilla y provincia.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5Z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="presupuesto.html">Presupuesto</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Pol. Ind. La Isla, nave 12</li><li>Sevilla</li><li>954 00 00 00</li><li>obras@reformasmartin.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Lun – Vie: 8:00 – 19:00</li><li>Sábado: con cita</li><li>Urgencias: 24 h</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Reformas Martín · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../_shared/core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

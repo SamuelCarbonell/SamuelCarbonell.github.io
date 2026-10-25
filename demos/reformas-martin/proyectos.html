@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyectos · Reformas Martín (demo)</title>
+<meta name="description" content="Proyectos de reforma antes y después. Web de demostración.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Reformas Martín, inicio">
+        <span class="brand__mark">RM</span>
+        <span><span class="brand__name">Reformas Martín</span><span class="brand__tag">Desde 2006 · Sevilla</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html" aria-current="page">Proyectos</a>
+        <a href="presupuesto.html" class="btn btn--primary">Presupuesto</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__img" data-parallax="60" style="background-image:url('img/salon-3.webp')"></div>
+      <div class="wrap">
+        <p class="crumbs rv"><a href="index.html">Inicio</a> / Proyectos</p>
+        <h1 class="split">Obras <em>terminadas</em></h1>
+        <p class="rv">Algunos de nuestros trabajos recientes. Arrastra la barra de cada foto para ver el antes y el después.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap" style="display:grid;gap:clamp(3rem,6vw,5rem)">
+        <article>
+          <div class="head-row" style="margin-bottom:1.4rem"><div class="head"><p class="kicker rv">Reforma integral</p><h2 class="split" style="font-size:clamp(1.8rem,3.6vw,2.6rem)">Piso en <em>Nervión</em></h2></div></div>
+          <div class="ba rv" tabindex="0" role="slider" aria-label="Comparar antes y después, piso en Nervión" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img src="img/antes-1.webp" alt="Antes" loading="lazy"><img class="after" src="img/salon-2.webp" alt="Después" loading="lazy">
+            <span class="ba__tag ba__tag--a">Antes</span><span class="ba__tag ba__tag--b">Después</span><span class="ba__handle"></span>
+          </div>
+          <div class="ba-meta rv"><span>📐 85 m²</span><span>⏱ 7 semanas</span><span>🔧 Distribución, instalaciones y acabados</span></div>
+        </article>
+        <article>
+          <div class="head-row" style="margin-bottom:1.4rem"><div class="head"><p class="kicker rv">Rehabilitación</p><h2 class="split" style="font-size:clamp(1.8rem,3.6vw,2.6rem)">Casa en <em>Triana</em></h2></div></div>
+          <div class="ba rv" tabindex="0" role="slider" aria-label="Comparar antes y después, casa en Triana" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img src="img/antes-2.webp" alt="Antes" loading="lazy"><img class="after" src="img/salon.webp" alt="Después" loading="lazy">
+            <span class="ba__tag ba__tag--a">Antes</span><span class="ba__tag ba__tag--b">Después</span><span class="ba__handle"></span>
+          </div>
+          <div class="ba-meta rv"><span>📐 120 m²</span><span>⏱ 12 semanas</span><span>🔧 Estructura, suelos y aislamiento</span></div>
+        </article>
+        <article>
+          <div class="head-row" style="margin-bottom:1.4rem"><div class="head"><p class="kicker rv">Baño</p><h2 class="split" style="font-size:clamp(1.8rem,3.6vw,2.6rem)">Baño en <em>Dos Hermanas</em></h2></div></div>
+          <div class="ba rv" tabindex="0" role="slider" aria-label="Comparar antes y después, baño en Dos Hermanas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <img src="img/antes-3.webp" alt="Antes" loading="lazy"><img class="after" src="img/bano-2.webp" alt="Después" loading="lazy">
+            <span class="ba__tag ba__tag--a">Antes</span><span class="ba__tag ba__tag--b">Después</span><span class="ba__handle"></span>
+          </div>
+          <div class="ba-meta rv"><span>📐 6 m²</span><span>⏱ 6 días</span><span>🔧 Plato de ducha, alicatado y mampara</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="head center"><p class="kicker rv">Galería</p><h2 class="split">Más <em>trabajos</em></h2></div>
+        <div class="filters rv" data-filters="works" role="group" aria-label="Filtrar proyectos">
+          <button class="active" data-f="all">Todo</button><button data-f="cocina">Cocinas</button><button data-f="bano">Baños</button><button data-f="integral">Integrales</button><button data-f="equipo">El equipo</button>
+        </div>
+        <div class="gallery" id="works">
+          <button class="g-wide g-tall rv" data-cat="cocina" data-caption="Cocina con isla · Bormujos"><img src="img/hero.webp" alt="Cocina con isla" loading="lazy"></button>
+          <button class="rv" data-cat="bano" data-caption="Baño en madera · Sevilla"><img src="img/bano.webp" alt="Baño en madera" loading="lazy"></button>
+          <button class="rv" data-cat="cocina" data-caption="Cocina blanca · Mairena"><img src="img/cocina.webp" alt="Cocina blanca" loading="lazy"></button>
+          <button class="rv" data-cat="integral" data-caption="Salón abierto · Nervión"><img src="img/salon-3.webp" alt="Salón abierto" loading="lazy"></button>
+          <button class="rv" data-cat="equipo" data-caption="Revisión de obra"><img src="img/equipo.webp" alt="Dos operarios revisando planos" loading="lazy"></button>
+          <button class="g-wide rv" data-cat="integral" data-caption="Piso completo · Los Remedios"><img src="img/salon.webp" alt="Piso reformado" loading="lazy"></button>
+          <button class="rv" data-cat="equipo" data-caption="Carpintería a medida"><img src="img/carpintero.webp" alt="Carpintero trabajando" loading="lazy"></button>
+          <button class="rv" data-cat="bano" data-caption="Ducha de obra · Dos Hermanas"><img src="img/bano-2.webp" alt="Ducha de obra" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="yellow-band">
+      <div class="wrap">
+        <h2 class="split">¿Quieres un resultado así?</h2>
+        <a href="presupuesto.html" class="btn btn--dark rv">Calcular presupuesto →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__mark">RM</span><span><span class="brand__name">Reformas Martín</span><span class="brand__tag">Desde 2006 · Sevilla</span></span></a>
+          <p>Empresa de reformas con equipo propio en Sevilla y provincia.</p>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="presupuesto.html">Presupuesto</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Pol. Ind. La Isla, nave 12</li><li>Sevilla</li><li>954 00 00 00</li><li>obras@reformasmartin.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Lun – Vie: 8:00 – 19:00</li><li>Sábado: con cita</li><li>Urgencias: 24 h</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Reformas Martín · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-label="Imagen ampliada"><button class="lightbox__close" aria-label="Cerrar">×</button><div><img alt=""><p></p></div></div>
+  <script src="../_shared/core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

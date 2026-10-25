@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcula tu presupuesto · Reformas Martín (demo)</title>
+<meta name="description" content="Calcula un precio orientativo para tu reforma en un minuto. Web de demostración.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Reformas Martín, inicio">
+        <span class="brand__mark">RM</span>
+        <span><span class="brand__name">Reformas Martín</span><span class="brand__tag">Desde 2006 · Sevilla</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="presupuesto.html" class="btn btn--primary" aria-current="page">Presupuesto</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__img" data-parallax="60" style="background-image:url('img/equipo.webp')"></div>
+      <div class="wrap">
+        <p class="crumbs rv"><a href="index.html">Inicio</a> / Presupuesto</p>
+        <h1 class="split">Calcula tu <em>presupuesto</em></h1>
+        <p class="rv">Un precio orientativo en un minuto. Después vamos a verlo sin compromiso y te damos el precio cerrado en 48 h.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <form class="wrap calc" id="calcForm">
+        <div class="form rv">
+          <div>
+            <h3><span>1</span> ¿Qué quieres reformar?</h3>
+            <div class="option-cards">
+              <label><input type="radio" name="tipo" value="cocina" checked><span class="opt"><i>🍳</i><b>Cocina</b><small>Muebles, encimera e instalaciones</small></span></label>
+              <label><input type="radio" name="tipo" value="bano"><span class="opt"><i>🛁</i><b>Baño</b><small>Sanitarios, alicatado y ducha</small></span></label>
+              <label><input type="radio" name="tipo" value="integral"><span class="opt"><i>🏠</i><b>Piso completo</b><small>Reforma integral llave en mano</small></span></label>
+              <label><input type="radio" name="tipo" value="pintura"><span class="opt"><i>🎨</i><b>Pintura</b><small>Alisado y pintado de paredes</small></span></label>
+            </div>
+          </div>
+          <div class="range">
+            <div class="range__top"><h3 style="margin:0"><span>2</span> Superficie</h3><output id="m2Out" for="m2">12 m²</output></div>
+            <input type="range" id="m2" name="m2" min="3" max="200" value="12" aria-label="Metros cuadrados">
+            <small class="muted" id="m2Hint">Una cocina media tiene entre 8 y 15 m².</small>
+          </div>
+          <div>
+            <h3><span>3</span> Nivel de acabados</h3>
+            <div class="option-cards">
+              <label><input type="radio" name="calidad" value="basica"><span class="opt"><b>Esencial</b><small>Materiales de calidad a buen precio</small></span></label>
+              <label><input type="radio" name="calidad" value="media" checked><span class="opt"><b>Confort</b><small>La opción más elegida</small></span></label>
+              <label><input type="radio" name="calidad" value="premium"><span class="opt"><b>Premium</b><small>Primeras marcas y diseño a medida</small></span></label>
+            </div>
+          </div>
+          <div>
+            <h3><span>4</span> Extras</h3>
+            <div class="checks">
+              <label><input type="checkbox" name="extra" value="escombros" data-fixed="350">Retirada de escombros <small>+350 €</small></label>
+              <label><input type="checkbox" name="extra" value="licencia" data-fixed="280">Gestión de licencia <small>+280 €</small></label>
+              <label><input type="checkbox" name="extra" value="diseno" data-fixed="250">Diseño 3D <small>+250 €</small></label>
+              <label><input type="checkbox" name="extra" value="electricidad" data-m2="35">Instalación eléctrica nueva <small>+35 €/m²</small></label>
+            </div>
+          </div>
+          <div>
+            <h3><span>5</span> Tus datos</h3>
+            <div class="form__row">
+              <div class="field"><label for="c-name">Nombre</label><input id="c-name" name="nombre" required autocomplete="name"></div>
+              <div class="field"><label for="c-tel">Teléfono</label><input id="c-tel" name="telefono" type="tel" required autocomplete="tel"></div>
+            </div>
+            <div class="form__row" style="margin-top:1rem">
+              <div class="field"><label for="c-town">Municipio</label><input id="c-town" name="municipio" placeholder="Sevilla, Dos Hermanas…" required></div>
+              <div class="field"><label for="c-when">¿Cuándo quieres empezar?</label><select id="c-when" name="cuando"><option>Lo antes posible</option><option>En 1–3 meses</option><option>En más de 3 meses</option><option>Solo estoy mirando precios</option></select></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="result">
+          <h3>Tu estimación</h3>
+          <p class="amount" id="amount">— <small>precio orientativo con IVA</small></p>
+          <dl>
+            <dt>Obra</dt><dd id="rTipo">Cocina</dd>
+            <dt>Superficie</dt><dd id="rM2">12 m²</dd>
+            <dt>Acabados</dt><dd id="rCal">Confort</dd>
+            <dt>Plazo estimado</dt><dd id="rPlazo">—</dd>
+          </dl>
+          <button class="btn btn--primary" type="submit">Pedir visita gratuita</button>
+          <p class="disclaimer">Cálculo aproximado según precios medios. El precio definitivo se cierra tras la visita técnica.</p>
+        </aside>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__mark">RM</span><span><span class="brand__name">Reformas Martín</span><span class="brand__tag">Desde 2006 · Sevilla</span></span></a>
+          <p>Empresa de reformas con equipo propio en Sevilla y provincia.</p>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="presupuesto.html">Presupuesto</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Pol. Ind. La Isla, nave 12</li><li>Sevilla</li><li>954 00 00 00</li><li>obras@reformasmartin.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Lun – Vie: 8:00 – 19:00</li><li>Sábado: con cita</li><li>Urgencias: 24 h</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Reformas Martín · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="modal__box">
+      <div class="modal__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h3 id="mTitle">¡Solicitud enviada!</h3>
+      <p class="bubble"></p>
+      <small>Esto es una demo: en la web real, este mensaje llegaría al WhatsApp de la empresa.</small>
+      <button class="btn btn--primary" type="button" data-close>Entendido</button>
+    </div>
+  </div>
+
+  <script src="../_shared/core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
