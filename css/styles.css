@@ -161,10 +161,10 @@ p { margin: 0 0 1em; }
 .card p { color: var(--muted); margin: 0; }
 
 /* Proyectos */
-.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
 .project { border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); overflow: hidden; transition: transform .4s var(--ease), border-color .3s, box-shadow .4s; }
 .project:hover { transform: translateY(-8px); border-color: rgba(255, 122, 89, .4); box-shadow: var(--shadow); }
-.project__preview { display: block; position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg); }
+.project__preview { display: block; position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg); }
 .project__preview iframe { position: absolute; top: 0; left: 0; width: 1280px; max-width: none; height: 960px; border: 0; transform-origin: 0 0; transform: scale(var(--s, .28)); pointer-events: none; }
 .project__open { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(11, 18, 32, .6); font-weight: 700; opacity: 0; transition: opacity .3s; backdrop-filter: blur(2px); }
 .project__preview:hover .project__open, .project__preview:focus-visible .project__open { opacity: 1; }
