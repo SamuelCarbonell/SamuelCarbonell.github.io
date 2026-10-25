@@ -11,10 +11,12 @@ Páginas web modernas, rápidas y animadas para pequeños negocios.
 ├── index.html          Página principal
 ├── css/styles.css      Estilos
 ├── js/main.js          Animaciones, escaparate y formulario
-├── demos/              Webs de ejemplo (negocios ficticios)
-│   ├── cafeteria.html
-│   ├── peluqueria.html
-│   └── reformas.html
+├── demos/              Webs de ejemplo de varias páginas (negocios ficticios)
+│   ├── _shared/        Estilos y JavaScript comunes de las demos
+│   ├── casa-olivo/     Restauración: inicio, carta, nosotros, reservas
+│   ├── studio-nova/    Belleza: inicio, servicios, trabajos, cita
+│   ├── reformas-martin/ Reformas: inicio, servicios, proyectos, presupuesto
+│   └── nucleo-fisio/   Salud: inicio, tratamientos, equipo, cita
 ├── fonts/              Tipografías alojadas en la propia web
 ├── img/                Logo e imágenes
 ├── robots.txt
@@ -22,6 +24,7 @@ Páginas web modernas, rápidas y animadas para pequeños negocios.
 ```
 
 Hecha con HTML, CSS y JavaScript, sin frameworks ni dependencias.
+Fotos de las demos: [Unsplash](https://unsplash.com) (licencia libre; detalle en cada `img/CREDITOS.txt`).
 
 ## Contacto
 
