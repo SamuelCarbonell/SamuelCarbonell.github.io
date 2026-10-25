@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedir cita · Núcleo (demo)</title>
+<meta name="description" content="Reserva tu cita de fisioterapia, pilates o masaje online. Web de demostración.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Núcleo, inicio">
+        <span class="brand__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+        <span><span class="brand__name">Núcleo</span><span class="brand__tag">Fisioterapia · Pilates</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="cita.html" class="btn btn--primary" aria-current="page">Pedir cita</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__img" data-parallax="60" style="background-image:url('img/fisio-espalda.webp')"></div>
+      <div class="wrap">
+        <p class="crumbs rv"><a href="index.html">Inicio</a> / Pedir cita</p>
+        <h1 class="split">Pide tu <em>cita</em></h1>
+        <p class="rv">Elige el tipo de sesión, cuéntanos qué te pasa y reserva la hora que mejor te venga.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <form class="wrap booking" id="bookForm">
+        <div>
+          <div class="step-box rv">
+            <h3><span>1</span> Tipo de sesión</h3>
+            <div class="option-cards">
+              <label><input type="radio" name="tipo" value="Valoración inicial" data-price="0" data-min="20" checked><span class="opt"><i>🩺</i><b>Valoración</b><small>20 min</small><span class="p">Gratis</span></span></label>
+              <label><input type="radio" name="tipo" value="Fisioterapia" data-price="45" data-min="50"><span class="opt"><i>💪</i><b>Fisioterapia</b><small>50 min</small><span class="p">45 €</span></span></label>
+              <label><input type="radio" name="tipo" value="Pilates reformer" data-price="18" data-min="55"><span class="opt"><i>🧘</i><b>Pilates</b><small>55 min · grupo</small><span class="p">18 €</span></span></label>
+              <label><input type="radio" name="tipo" value="Masaje terapéutico" data-price="50" data-min="60"><span class="opt"><i>🤲</i><b>Masaje</b><small>60 min</small><span class="p">50 €</span></span></label>
+            </div>
+          </div>
+
+          <div class="step-box rv">
+            <h3><span>2</span> ¿Dónde notas la molestia?</h3>
+            <div class="chips">
+              <label><input type="checkbox" name="zona" value="Cuello"><span>Cuello</span></label>
+              <label><input type="checkbox" name="zona" value="Hombro"><span>Hombro</span></label>
+              <label><input type="checkbox" name="zona" value="Espalda"><span>Espalda</span></label>
+              <label><input type="checkbox" name="zona" value="Cadera"><span>Cadera</span></label>
+              <label><input type="checkbox" name="zona" value="Rodilla"><span>Rodilla</span></label>
+              <label><input type="checkbox" name="zona" value="Tobillo"><span>Tobillo</span></label>
+              <label><input type="checkbox" name="zona" value="Otra"><span>Otra / no sé</span></label>
+            </div>
+            <div class="field" style="margin-top:1.2rem"><label for="pain">Intensidad del dolor: <b id="painOut">4</b>/10</label><input type="range" id="pain" name="dolor" min="0" max="10" value="4" style="accent-color:var(--accent)"></div>
+          </div>
+
+          <div class="step-box rv">
+            <h3><span>3</span> Profesional, día y hora</h3>
+            <div class="form__row">
+              <div class="field"><label for="pro">Profesional</label><select id="pro" name="pro"><option>Primera persona disponible</option><option>Laura Benítez</option><option>Pablo Ruiz</option><option>Sara Delgado (pilates)</option></select></div>
+              <div class="field"><label for="date">Día</label><input type="date" id="date" name="fecha" required></div>
+            </div>
+            <fieldset class="field" style="margin-top:1.2rem"><legend>Hora disponible</legend><div class="chips" id="slots"></div></fieldset>
+          </div>
+
+          <div class="step-box rv">
+            <h3><span>4</span> Tus datos</h3>
+            <div class="form__row">
+              <div class="field"><label for="name">Nombre</label><input id="name" name="nombre" required autocomplete="name"></div>
+              <div class="field"><label for="tel">Teléfono</label><input id="tel" name="telefono" type="tel" required autocomplete="tel"></div>
+            </div>
+            <div class="field" style="margin-top:1rem"><label for="ins">¿Vienes por un seguro? (opcional)</label><select id="ins" name="seguro"><option value="">No, sesión privada</option><option>Sanitas</option><option>Adeslas</option><option>DKV</option><option>Asisa</option><option>Mapfre</option></select></div>
+          </div>
+        </div>
+
+        <aside class="summary">
+          <h3>Resumen</h3>
+          <dl>
+            <dt>Sesión</dt><dd id="sTipo">Valoración inicial</dd>
+            <dt>Duración</dt><dd id="sDur">20 min</dd>
+            <dt>Zona</dt><dd id="sZona">—</dd>
+            <dt>Con</dt><dd id="sPro">Primera persona disponible</dd>
+            <dt>Día</dt><dd id="sDate">—</dd>
+            <dt>Hora</dt><dd id="sTime">—</dd>
+          </dl>
+          <p class="total"><small>Precio</small><span id="sPrice">Gratis</span></p>
+          <button class="btn" type="submit" id="submit" disabled>Confirmar cita</button>
+          <p class="hint">Te enviamos un recordatorio por WhatsApp el día anterior.</p>
+        </aside>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><span class="brand__name">Núcleo</span><span class="brand__tag">Fisioterapia · Pilates</span></span></a>
+          <p>Centro de fisioterapia y pilates en Sevilla.</p>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="tratamientos.html">Tratamientos</a></li><li><a href="equipo.html">Equipo</a></li><li><a href="cita.html">Pedir cita</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>C/ Asunción, 30</li><li>41011 Sevilla</li><li>954 00 00 00</li><li>cita@nucleofisio.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Lun – Vie: 8:30 – 21:00</li><li>Sábado: 9:00 – 13:00</li><li>Domingo: cerrado</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Núcleo · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="modal__box">
+      <div class="modal__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h3 id="mTitle">¡Cita solicitada!</h3>
+      <p class="bubble"></p>
+      <small>Esto es una demo: en la web real, este mensaje llegaría al WhatsApp del centro.</small>
+      <button class="btn btn--primary" type="button" data-close>Perfecto</button>
+    </div>
+  </div>
+
+  <script src="../_shared/core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

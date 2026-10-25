@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tratamientos y precios · Núcleo (demo)</title>
+<meta name="description" content="Fisioterapia, pilates y masaje: tratamientos, precios y bonos. Web de demostración.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/base.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="demo-bar">Web de demostración · negocio ficticio · Diseñada por <a href="../../index.html" target="_top">Samuel Carbonell</a></div>
+
+  <header class="nav nav--over">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Núcleo, inicio">
+        <span class="brand__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+        <span><span class="brand__name">Núcleo</span><span class="brand__tag">Fisioterapia · Pilates</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="tratamientos.html" aria-current="page">Tratamientos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="cita.html" class="btn btn--primary">Pedir cita</a>
+      </nav>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__img" data-parallax="60" style="background-image:url('img/fisio-hombro.webp')"></div>
+      <div class="wrap">
+        <p class="crumbs rv"><a href="index.html">Inicio</a> / Tratamientos</p>
+        <h1 class="split">Tratamientos <em>y precios</em></h1>
+        <p class="rv">Todas las sesiones son individuales y duran 50 minutos. Si no sabes qué necesitas, empieza por la valoración gratuita.</p>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Secciones">
+      <div class="wrap">
+        <a href="#fisio" class="active">Fisioterapia</a>
+        <a href="#pilates">Pilates</a>
+        <a href="#masaje">Masaje</a>
+        <a href="#bonos">Bonos</a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="wrap prices-layout">
+        <div>
+          <div class="tab-section" id="fisio">
+            <h2 class="rv" style="font-size:clamp(1.9rem,3.6vw,2.6rem)">Fisioterapia</h2>
+            <div class="price-item rv"><div><h3>Valoración inicial</h3><p>Exploración, diagnóstico funcional y plan de tratamiento.</p></div><span class="meta">20 min</span><span class="price">Gratis</span></div>
+            <div class="price-item rv"><div><h3>Sesión de fisioterapia</h3><p>Terapia manual, punción seca, ejercicio terapéutico o lo que tu caso necesite.</p></div><span class="meta">50 min</span><span class="price">45 €</span></div>
+            <div class="price-item rv"><div><h3>Fisioterapia deportiva</h3><p>Lesiones musculares, tendinopatías y vuelta al deporte.</p></div><span class="meta">50 min</span><span class="price">48 €</span></div>
+            <div class="price-item rv"><div><h3>Readaptación tras operación</h3><p>Rodilla, hombro, cadera… con seguimiento semanal.</p></div><span class="meta">50 min</span><span class="price">48 €</span></div>
+            <div class="price-item rv"><div><h3>Fisioterapia a domicilio</h3><p>En Sevilla capital. Incluye desplazamiento.</p></div><span class="meta">50 min</span><span class="price">60 €</span></div>
+          </div>
+          <div class="tab-section" id="pilates">
+            <h2 class="rv" style="font-size:clamp(1.9rem,3.6vw,2.6rem)">Pilates</h2>
+            <div class="price-item rv"><div><h3>Clase de prueba</h3><p>Conoce el método y a tu instructora.</p></div><span class="meta">55 min</span><span class="price">Gratis</span></div>
+            <div class="price-item rv"><div><h3>Pilates reformer en grupo</h3><p>Máximo 5 personas por clase.</p></div><span class="meta">55 min</span><span class="price">18 €</span></div>
+            <div class="price-item rv"><div><h3>Pilates suelo terapéutico</h3><p>Espalda sana, embarazo y mayores.</p></div><span class="meta">55 min</span><span class="price">14 €</span></div>
+            <div class="price-item rv"><div><h3>Pilates individual</h3><p>Clase privada adaptada a tu lesión.</p></div><span class="meta">55 min</span><span class="price">45 €</span></div>
+          </div>
+          <div class="tab-section" id="masaje">
+            <h2 class="rv" style="font-size:clamp(1.9rem,3.6vw,2.6rem)">Masaje</h2>
+            <div class="price-item rv"><div><h3>Masaje descontracturante</h3><p>Espalda, cuello y hombros.</p></div><span class="meta">30 min</span><span class="price">30 €</span></div>
+            <div class="price-item rv"><div><h3>Masaje terapéutico completo</h3><p>Cuerpo completo con aceites neutros.</p></div><span class="meta">60 min</span><span class="price">50 €</span></div>
+            <div class="price-item rv"><div><h3>Drenaje linfático manual</h3><p>Piernas cansadas, postoperatorios y retención.</p></div><span class="meta">50 min</span><span class="price">45 €</span></div>
+          </div>
+        </div>
+        <aside class="aside">
+          <div class="aside-card rv">
+            <h3>¿No sabes por dónde empezar?</h3>
+            <p>Reserva una valoración gratuita de 20 minutos. Sin compromiso.</p>
+            <a href="cita.html" class="btn">Reservar valoración</a>
+          </div>
+          <div class="faq rv">
+            <details><summary>¿Necesito volante médico?</summary><p>No. Solo si vienes a través de tu seguro, según las condiciones de tu póliza.</p></details>
+            <details><summary>¿Qué ropa debo traer?</summary><p>Ropa cómoda. Para pilates, calcetines antideslizantes (te los prestamos el primer día).</p></details>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="bonos">
+      <div class="wrap center tab-section" style="padding-top:0">
+        <div class="head center"><p class="kicker rv">Bonos</p><h2 class="split">Ahorra con <em>un bono</em></h2></div>
+        <div class="toggle rv" role="group" aria-label="Tipo de bono">
+          <button class="active" data-mode="fisio">Fisioterapia</button>
+          <button data-mode="pilates">Pilates reformer</button>
+        </div>
+        <div class="plans" style="text-align:left">
+          <article class="plan rv" data-plan="1"><h3>Sesión suelta</h3><p class="desc">Para una molestia puntual.</p><p class="price"><span data-price></span> <small data-unit></small></p><p class="save" data-save></p><ul><li>Sin permanencia</li><li>Paga al terminar</li></ul><a href="cita.html" class="btn btn--ghost">Reservar</a></article>
+          <article class="plan plan--hot rv" data-plan="5"><h3>Bono 5</h3><p class="desc">El más elegido para tratar una lesión.</p><p class="price"><span data-price></span> <small data-unit></small></p><p class="save" data-save></p><ul><li>Válido 3 meses</li><li>Seguimiento de tu evolución</li><li>Compartible con un familiar</li></ul><a href="cita.html" class="btn btn--primary">Elegir bono</a></article>
+          <article class="plan rv" data-plan="10"><h3>Bono 10</h3><p class="desc">Para tratamientos largos o mantenimiento.</p><p class="price"><span data-price></span> <small data-unit></small></p><p class="save" data-save></p><ul><li>Válido 6 meses</li><li>Revisión gratuita al terminar</li><li>Compartible con un familiar</li></ul><a href="cita.html" class="btn btn--ghost">Elegir bono</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-band__img" data-parallax="70" style="background-image:url('img/pilates-sala.webp')"></div>
+      <div class="wrap">
+        <h2 class="split">Empieza hoy <em>a sentirte mejor</em></h2>
+        <p class="rv">Citas de lunes a sábado, también por la tarde.</p>
+        <a href="cita.html" class="btn btn--light rv">Pedir cita</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><span class="brand__name">Núcleo</span><span class="brand__tag">Fisioterapia · Pilates</span></span></a>
+          <p>Centro de fisioterapia y pilates en Sevilla.</p>
+        </div>
+        <div><h4>Explora</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="tratamientos.html">Tratamientos</a></li><li><a href="equipo.html">Equipo</a></li><li><a href="cita.html">Pedir cita</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>C/ Asunción, 30</li><li>41011 Sevilla</li><li>954 00 00 00</li><li>cita@nucleofisio.es</li></ul></div>
+        <div><h4>Horario</h4><ul><li>Lun – Vie: 8:30 – 21:00</li><li>Sábado: 9:00 – 13:00</li><li>Domingo: cerrado</li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Núcleo · Negocio ficticio de demostración · Fotos: Unsplash</span>
+        <span>Diseño web: <a href="../../index.html" target="_top">Samuel Carbonell</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../_shared/core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
