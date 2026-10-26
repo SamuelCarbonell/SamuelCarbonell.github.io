@@ -102,7 +102,29 @@ const startShow = () => {
   clearInterval(timer);
   if (!reduceMotion) timer = setInterval(() => showSlide((current + 1) % SHOWCASE.length), 4500);
 };
-dots.forEach((d, n) => d.addEventListener("click", () => { showSlide(n); startShow(); }));
+const goTo = (i) => { showSlide((i + SHOWCASE.length) % SHOWCASE.length); startShow(); };
+dots.forEach((d, n) => d.addEventListener("click", () => goTo(n)));
+document.getElementById("showPrev").addEventListener("click", () => goTo(current - 1));
+document.getElementById("showNext").addEventListener("click", () => goTo(current + 1));
+
+// Deslizar (dedo o ratón) para pasar a la web siguiente o a la anterior
+const showcase = document.querySelector(".showcase");
+let swipe = null;
+showcase.addEventListener("pointerdown", (e) => {
+  if (e.pointerType === "mouse" && e.button !== 0) return;
+  swipe = { x: e.clientX, y: e.clientY, id: e.pointerId };
+  if (e.pointerType === "mouse") showcase.classList.add("dragging");
+});
+const endSwipe = (e) => {
+  if (!swipe || e.pointerId !== swipe.id) return;
+  const dx = e.clientX - swipe.x, dy = e.clientY - swipe.y;
+  swipe = null;
+  showcase.classList.remove("dragging");
+  if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) goTo(current + (dx < 0 ? 1 : -1));
+};
+window.addEventListener("pointerup", endSwipe);
+window.addEventListener("pointercancel", () => { swipe = null; showcase.classList.remove("dragging"); });
+showcase.addEventListener("dragstart", (e) => e.preventDefault());
 
 // Arranca cuando la página ya ha cargado, y se pausa cuando la portada no está en pantalla
 window.addEventListener("load", () => {
