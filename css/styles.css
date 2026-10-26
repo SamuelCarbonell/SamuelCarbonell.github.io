@@ -175,6 +175,7 @@ p { margin: 0 0 1em; }
 .project__preview:hover .project__open, .project__preview:focus-visible .project__open { opacity: 1; }
 .project__info { padding: 1.4rem 1.5rem 1.6rem; }
 .project__info p { color: var(--muted); margin: 0; font-size: .95rem; }
+.carousel-nav { display: none; }
 .tag { display: inline-block; font-size: .75rem; font-weight: 700; color: var(--teal); background: rgba(94, 234, 212, .08); padding: .3em .8em; border-radius: 999px; margin-bottom: .8rem; }
 
 /* Cifras */
@@ -337,7 +338,31 @@ p { margin: 0 0 1em; }
   .nav.menu-open .nav__toggle span:nth-child(2) { opacity: 0; }
   .nav.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .nav.menu-open { background: rgba(11, 18, 32, .97); }
-  .cards, .projects { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  /* Proyectos: carrusel horizontal, una tarjeta por pantalla y la siguiente asomando */
+  .projects { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; margin-inline: -16px; padding: 4px 16px 6px; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .projects::-webkit-scrollbar { display: none; }
+  .project { flex: 0 0 86%; scroll-snap-align: start; }
+  .project:hover { transform: none; }
+  .projects .reveal { opacity: 1; transform: none; }
+  .project__open { inset: auto 10px 10px auto; padding: .45em .9em; border-radius: 999px; background: var(--coral); color: #1b0f0a; font-size: .8rem; opacity: 1; backdrop-filter: none; }
+  .project__info { padding: 1rem 1.1rem 1.2rem; }
+  .project__info h3 { margin-bottom: .3em; }
+  .project__info p { font-size: .88rem; }
+  .tag { margin-bottom: .5rem; }
+  .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 14px; }
+  #proyectos .section__head, #paquetes .section__head { margin-bottom: 2rem; }
+  /* Paquetes: mismo carrusel; arriba deja sitio para la etiqueta "Más elegido" */
+  .pricing { display: flex; gap: 14px; max-width: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; margin-inline: -16px; padding: 18px 16px 6px; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .pricing::-webkit-scrollbar { display: none; }
+  .plan { flex: 0 0 86%; scroll-snap-align: start; padding: 1.6rem 1.4rem; }
+  .plan:hover, .plan--featured:hover { transform: none; }
+  .pricing .reveal { opacity: 1; transform: none; }
+  .plan ul { margin-bottom: 1.4rem; gap: .55rem; }
+  .plan__desc { margin-bottom: 1rem; padding-bottom: 1rem; }
+  .care { margin-top: 1.8rem; padding: 1.4rem; gap: 1rem; }
+  .care__list { grid-template-columns: 1fr 1fr; gap: .5rem .8rem; }
+  .care__list li { font-size: .85rem; }
   .steps { grid-template-columns: 1fr; }
   .chip { font-size: .78rem; }
   .chip--1 { left: 0; }
