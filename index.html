@@ -37,7 +37,6 @@
     "telephone": "+34622934029",
     "address": { "@type": "PostalAddress", "addressLocality": "Dos Hermanas", "addressRegion": "Sevilla", "addressCountry": "ES" },
     "areaServed": ["Dos Hermanas", "Sevilla", "ES"],
-    "priceRange": "€€",
     "founder": { "@type": "Person", "name": "Samuel Carbonell" },
     "sameAs": ["https://github.com/SamuelCarbonell"]
   }
@@ -68,7 +67,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#proceso">Proceso</a>
-        <a href="#precios">Precios</a>
+        <a href="#paquetes">Paquetes</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#contacto" class="btn btn--sm btn--primary">Hablemos</a>
       </nav>
@@ -131,11 +130,15 @@
             <div class="chip chip--1 float-slow" aria-hidden="true">🎨 Diseño a medida</div>
             <div class="chip chip--2 float" aria-hidden="true">📱 Perfecta en el móvil</div>
           </div>
-          <div class="show-dots" role="tablist" aria-label="Webs de ejemplo">
-            <button class="is-active" aria-label="Ver web de restaurante"></button>
-            <button aria-label="Ver web de peluquería"></button>
-            <button aria-label="Ver web de reformas"></button>
-            <button aria-label="Ver web de clínica"></button>
+          <div class="show-nav">
+            <button class="show-arrow" id="showPrev" aria-label="Web anterior">‹</button>
+            <div class="show-dots" role="tablist" aria-label="Webs de ejemplo">
+              <button class="is-active" aria-label="Ver web de restaurante"></button>
+              <button aria-label="Ver web de peluquería"></button>
+              <button aria-label="Ver web de reformas"></button>
+              <button aria-label="Ver web de clínica"></button>
+            </div>
+            <button class="show-arrow" id="showNext" aria-label="Web siguiente">›</button>
           </div>
         </div>
       </div>
@@ -281,33 +284,30 @@
       </div>
     </section>
 
-    <!-- ===== PRECIOS ===== -->
-    <section class="section section--alt" id="precios">
+    <!-- ===== PAQUETES ===== -->
+    <section class="section section--alt" id="paquetes">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Precios</p>
-          <h2>Paquetes claros para cada negocio</h2>
-          <p class="lead">Precios orientativos. Cada proyecto es distinto: pídeme presupuesto cerrado sin compromiso.</p>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Lo que puedo hacer por tu negocio</h2>
+          <p class="lead">Cada negocio es distinto, por eso el precio es personalizado. Cuéntame qué necesitas y te preparo un presupuesto cerrado, gratis y sin compromiso.</p>
         </header>
-        <!-- EDITAR: ajusta los precios a tus tarifas -->
         <div class="pricing">
           <article class="plan reveal">
             <h3>Esencial</h3>
             <p class="plan__desc">Para empezar a estar en internet.</p>
-            <p class="plan__price"><small>desde</small> 290 €</p>
             <ul>
               <li>Web de una página (landing)</li>
               <li>Diseño adaptado al móvil</li>
               <li>Botón de WhatsApp y mapa</li>
               <li>Publicación incluida</li>
             </ul>
-            <a href="#contacto" class="btn btn--ghost btn--block" data-plan="Esencial">Lo quiero</a>
+            <a href="#contacto" class="btn btn--ghost btn--block" data-plan="Esencial">Pedir presupuesto</a>
           </article>
           <article class="plan plan--featured reveal">
             <span class="plan__badge">Más elegido</span>
             <h3>Profesional</h3>
             <p class="plan__desc">La opción ideal para negocios locales.</p>
-            <p class="plan__price"><small>desde</small> 550 €</p>
             <ul>
               <li>Hasta 5 secciones o páginas</li>
               <li>Animaciones personalizadas</li>
@@ -315,22 +315,20 @@
               <li>Galería de fotos o carta de servicios</li>
               <li>1 mes de cambios incluido</li>
             </ul>
-            <a href="#contacto" class="btn btn--primary btn--block" data-plan="Profesional">Lo quiero</a>
+            <a href="#contacto" class="btn btn--primary btn--block" data-plan="Profesional">Pedir presupuesto</a>
           </article>
           <article class="plan reveal">
             <h3>A medida</h3>
             <p class="plan__desc">Para proyectos con necesidades especiales.</p>
-            <p class="plan__price"><small>desde</small> 900 €</p>
             <ul>
               <li>Páginas ilimitadas</li>
               <li>Reservas, catálogo o blog</li>
               <li>Integraciones a medida</li>
               <li>3 meses de cambios incluidos</li>
             </ul>
-            <a href="#contacto" class="btn btn--ghost btn--block" data-plan="A medida">Lo quiero</a>
+            <a href="#contacto" class="btn btn--ghost btn--block" data-plan="A medida">Pedir presupuesto</a>
           </article>
         </div>
-        <!-- EDITAR: ajusta el precio del mantenimiento -->
         <article class="care reveal">
           <div class="care__head">
             <span class="care__icon" aria-hidden="true">🛠️</span>
@@ -346,7 +344,6 @@
             <li>Sin permanencia: das de baja cuando quieras</li>
           </ul>
           <div class="care__cta">
-            <p class="plan__price"><small>desde</small> 19 €<small>/mes</small></p>
             <a href="#contacto" class="btn btn--ghost" data-plan="Mantenimiento">Me interesa</a>
           </div>
         </article>
@@ -359,7 +356,7 @@
         <div class="about__photo reveal">
           <div class="photo-frame">
             <!-- EDITAR: guarda tu foto como img/foto.jpg (cuadrada, mín. 600x600). Si no existe, se muestran tus iniciales. -->
-            <img src="img/foto.jpg" alt="Foto de Samuel Carbonell" width="600" height="600" loading="lazy"
+            <img src="img/foto.jpg" alt="Foto de Samuel Carbonell" width="720" height="720" loading="lazy"
                  onerror="this.remove()">
             <span class="photo-fallback" aria-hidden="true">SC</span>
           </div>
@@ -369,12 +366,14 @@
           <p class="eyebrow">Sobre mí</p>
           <h2>Soy Samuel, tu desarrollador web de confianza</h2>
           <!-- EDITAR: sustituye estos párrafos por tu historia real -->
-          <p>Soy de Dos Hermanas (Sevilla). <span class="edit-me">[Añade aquí 1-2 frases: cuánto llevas programando y por qué te gusta crear webs.]</span></p>
+          <p>Soy de Dos Hermanas (Sevilla) y convierto ideas en webs que se sienten vivas: cada animación, cada botón y cada detalle están pensados para que quien entre en tu web acabe escribiéndote.</p>
           <p>Me especializo en webs para pequeñas empresas porque sé que cada cliente cuenta. Trato directo conmigo, sin intermediarios ni agencias: hablas siempre con la persona que hace tu web.</p>
           <ul class="facts">
             <li><span>📍</span> Dos Hermanas, Sevilla · también en remoto</li>
-            <li><span>🧑‍💻</span> HTML, CSS y JavaScript</li>
-            <li><span>🎓</span> <span class="edit-me">[Formación o experiencia]</span></li>
+            <li><span>🎓</span> Formación en programación y desarrollo web</li>
+          </ul>
+          <ul class="stack" aria-label="Tecnologías que manejo">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>Java</li><li>SQL</li><li>Git y GitHub</li><li>Diseño responsive</li><li>UX/UI</li>
           </ul>
           <a href="#contacto" class="btn btn--primary">Trabajemos juntos</a>
         </div>
@@ -389,6 +388,7 @@
           <h2>Resolvemos tus dudas</h2>
         </header>
         <div class="faq">
+          <details class="reveal"><summary>¿Cuánto cuesta una web?</summary><p>Depende de lo que necesite tu negocio: número de páginas, reservas, galería… Por eso no trabajo con tarifas cerradas. Me cuentas tu idea y te envío un presupuesto personalizado, gratis y sin compromiso.</p></details>
           <details class="reveal"><summary>¿Cuánto tarda en estar lista mi web?</summary><p>Una web de una página suele estar en 1-2 semanas. Proyectos más grandes, entre 3 y 5 semanas. Te doy una fecha concreta en el presupuesto.</p></details>
           <details class="reveal"><summary>¿Necesito tener dominio y hosting?</summary><p>No. Si no los tienes, te ayudo a contratarlos (son baratos) y lo configuro todo. El dominio quedará siempre a tu nombre.</p></details>
           <details class="reveal"><summary>¿Podré cambiar cosas después?</summary><p>Sí. Los planes incluyen un periodo de cambios y después puedes contratar mantenimiento puntual o mensual.</p></details>
