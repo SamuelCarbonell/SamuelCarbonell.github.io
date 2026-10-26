@@ -18,7 +18,7 @@ Páginas web modernas, rápidas y animadas para pequeños negocios.
 │   ├── reformas-martin/ Reformas: inicio, servicios, proyectos, presupuesto
 │   └── nucleo-fisio/   Salud: inicio, tratamientos, equipo, cita
 ├── fonts/              Tipografías alojadas en la propia web
-├── img/                Logo e imágenes
+├── img/                Logo, foto, imagen para compartir (og.jpg) y capturas de las demos (shots/)
 ├── robots.txt
 └── sitemap.xml
 ```
