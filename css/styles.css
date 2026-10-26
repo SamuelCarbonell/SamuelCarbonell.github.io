@@ -124,7 +124,12 @@ p { margin: 0 0 1em; }
 .phone { position: absolute; right: -18px; bottom: 0; width: 27%; padding: 7px; border-radius: 26px; background: #070c16; border: 1px solid rgba(255, 255, 255, .14); box-shadow: var(--shadow), 0 0 40px -10px rgba(255, 122, 89, .4); }
 .phone__screen { aspect-ratio: 9 / 19; border-radius: 20px; }
 .phone::before { content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 30%; height: 6px; border-radius: 6px; background: #070c16; z-index: 2; }
-.show-dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+.showcase { touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.showcase.dragging { cursor: grabbing; }
+.show-nav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 10px; }
+.show-arrow { width: 34px; height: 34px; padding: 0 0 3px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--text, #fff); font-size: 1.3rem; line-height: 1; cursor: pointer; transition: border-color .3s, background .3s, color .3s; }
+.show-arrow:hover, .show-arrow:focus-visible { border-color: var(--coral); background: rgba(255, 122, 89, .12); color: var(--coral); }
+.show-dots { display: flex; justify-content: center; gap: 8px; }
 .show-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 8px; background: rgba(255, 255, 255, .25); cursor: pointer; transition: width .4s var(--ease), background .3s; }
 .show-dots button.is-active { width: 28px; background: var(--coral); }
 .chip { position: absolute; padding: .6em 1em; border-radius: 12px; background: rgba(20, 33, 58, .9); border: 1px solid var(--border); backdrop-filter: blur(8px); font-weight: 700; font-size: .9rem; box-shadow: var(--shadow); white-space: nowrap; }
@@ -192,9 +197,7 @@ p { margin: 0 0 1em; }
 .plan--featured { background: linear-gradient(180deg, rgba(255, 122, 89, .14), var(--surface) 55%); border-color: rgba(255, 122, 89, .5); transform: scale(1.03); box-shadow: 0 30px 60px -25px rgba(255, 122, 89, .45); }
 .plan--featured:hover { transform: scale(1.03) translateY(-6px); }
 .plan__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--grad); color: #1b0f0a; font-size: .78rem; font-weight: 800; padding: .35em 1em; border-radius: 999px; white-space: nowrap; }
-.plan__desc { color: var(--muted); font-size: .95rem; }
-.plan__price { font-size: 2.6rem; font-weight: 800; margin: .3em 0 .6em; }
-.plan__price small { font-size: .9rem; color: var(--muted); font-weight: 500; }
+.plan__desc { color: var(--muted); font-size: .95rem; margin: 0 0 1.4rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--border); }
 .plan ul { list-style: none; padding: 0; margin: 0 0 2rem; flex: 1; display: grid; gap: .7rem; align-content: start; }
 .plan li { padding-left: 1.7em; position: relative; color: #cfd8e8; }
 .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
@@ -207,7 +210,6 @@ p { margin: 0 0 1em; }
 .care__list li { padding-left: 1.6em; position: relative; color: #cfd8e8; font-size: .95rem; }
 .care__list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
 .care__cta { text-align: center; }
-.care__cta .plan__price { font-size: 2rem; margin: 0 0 .6rem; white-space: nowrap; }
 
 /* Sobre mí */
 .about { display: grid; grid-template-columns: .85fr 1.15fr; gap: 4rem; align-items: center; }
@@ -221,6 +223,10 @@ p { margin: 0 0 1em; }
 .about__text p { color: var(--muted); }
 .facts { list-style: none; padding: 0; margin: 1.5rem 0 2rem; display: grid; gap: .7rem; }
 .facts li { display: flex; gap: .7rem; }
+.facts { margin-bottom: 1.2rem; }
+.stack { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.stack li { padding: .4em .9em; border-radius: 999px; font-size: .85rem; font-weight: 700; color: var(--peach); background: rgba(255, 122, 89, .08); border: 1px solid rgba(255, 122, 89, .25); transition: background .3s, border-color .3s, transform .3s var(--ease); }
+.stack li:hover { background: rgba(255, 122, 89, .16); border-color: var(--coral); transform: translateY(-2px); }
 
 /* FAQ */
 .faq { display: grid; gap: .9rem; }
