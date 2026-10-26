@@ -71,6 +71,21 @@ document.querySelectorAll(".reveal").forEach((el) => {
 const rotator = document.getElementById("rotator");
 const showUrl = document.getElementById("showUrl");
 const dots = [...document.querySelectorAll(".show-dots button")];
+
+// Por defecto se ven capturas (ligeras). En ordenador, el navegador muestra las demos en vivo,
+// salvo que el visitante tenga activado el ahorro de datos.
+const liveDemos = window.matchMedia("(min-width: 981px)").matches && !navigator.connection?.saveData;
+if (liveDemos) {
+  document.querySelectorAll(".browser__screen .slide").forEach((img) => {
+    const f = document.createElement("iframe");
+    f.className = img.className;
+    f.title = img.alt;
+    f.tabIndex = -1;
+    f.dataset.src = img.dataset.demo;
+    f.style.background = `#0e1623 url(${img.src || img.dataset.src}) top / cover`; // la captura hace de portada mientras carga
+    img.replaceWith(f);
+  });
+}
 const browserSlides = [...document.querySelectorAll(".browser__screen .slide")];
 const phoneSlides = [...document.querySelectorAll(".phone__screen .slide")];
 let current = 0;
@@ -203,12 +218,8 @@ if (window.matchMedia("(pointer: fine)").matches && !reduceMotion) {
   });
 }
 
-// ----- Escalar las vistas previas de las demos al ancho de su tarjeta -----
-const previews = document.querySelectorAll(".project__preview");
-const fitPreviews = () => previews.forEach((p) => p.style.setProperty("--s", p.clientWidth / 1280));
-const fitAll = () => { fitPreviews(); fitShowcase(); };
-new ResizeObserver(fitAll).observe(document.body);
-fitAll();
+new ResizeObserver(fitShowcase).observe(document.body);
+fitShowcase();
 
 // ----- Carruseles del móvil (proyectos y paquetes): puntos y flechas siguen a la tarjeta visible -----
 const carousel = (track, nav, start = 0) => {
