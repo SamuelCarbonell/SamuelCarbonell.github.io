@@ -210,6 +210,35 @@ const fitAll = () => { fitPreviews(); fitShowcase(); };
 new ResizeObserver(fitAll).observe(document.body);
 fitAll();
 
+// ----- Carruseles del móvil (proyectos y paquetes): puntos y flechas siguen a la tarjeta visible -----
+const carousel = (track, nav, start = 0) => {
+  const cards = [...track.children];
+  const dots = [...nav.querySelectorAll(".show-dots button")];
+  const [prev, next] = nav.querySelectorAll(".show-arrow");
+  let cur = 0, target = null;
+  const offset = (i) => cards[i].offsetLeft - cards[0].offsetLeft;
+  const mark = (i) => { cur = i; dots.forEach((d, n) => d.classList.toggle("is-active", n === i)); };
+  const go = (i, smooth = !reduceMotion) => {
+    i = Math.max(0, Math.min(cards.length - 1, i));
+    target = i; // mientras dura el desplazamiento suave, las flechas parten de la tarjeta de destino
+    mark(i);
+    track.scrollTo({ left: offset(i), behavior: smooth ? "smooth" : "auto" });
+  };
+  track.addEventListener("scroll", () => {
+    const i = Math.round(track.scrollLeft / (offset(1) || 1));
+    if (target !== null) { if (i === target) target = null; return; }
+    mark(Math.min(i, cards.length - 1));
+  }, { passive: true });
+  track.addEventListener("touchstart", () => (target = null), { passive: true });
+  dots.forEach((d, n) => d.addEventListener("click", () => go(n)));
+  prev.addEventListener("click", () => go(cur - 1));
+  next.addEventListener("click", () => go(cur + 1));
+  if (start && nav.offsetParent) go(start, false); // solo cuando el carrusel está activo (móvil)
+};
+carousel(document.querySelector(".projects"), document.getElementById("projNav"));
+// Los paquetes empiezan en el "Más elegido"
+carousel(document.querySelector(".pricing"), document.getElementById("planNav"), 1);
+
 // ----- Botones "Lo quiero" de precios preseleccionan el plan -----
 document.querySelectorAll("[data-plan]").forEach((btn) =>
   btn.addEventListener("click", () => (document.getElementById("f-plan").value = btn.dataset.plan))
